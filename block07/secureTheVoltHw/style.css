@@ -1,0 +1,21 @@
+.msg {
+    font-family: "Bungee Tint", sans-serif;
+}
+
+span {
+    margin: auto;
+    width: fit-content;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#clickMsg:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+

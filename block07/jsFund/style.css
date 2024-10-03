@@ -1,0 +1,11 @@
+.home {
+    font-size: 20px;
+    border: 5px solid rgba(161, 94, 94, 0.72);
+    background-image: linear-gradient(rgb(206, 201, 201),black);
+    background-color: black;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+}
