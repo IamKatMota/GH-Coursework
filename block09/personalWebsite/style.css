@@ -1,10 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-/* header */
-.home h1{
 
+/* MAIN STYLES */
+a {
+    text-decoration: none;
 }
+body {
+    font-family: "Source Sans 3", sans-serif, Arial, Helvetica;}
+    h1{
+        font-weight: 300;
+        padding: 1rem;
+    }
+
+/* HEADER */
+.header {
+    background-image: linear-gradient(200deg, rgb(100, 166, 189), rgb(173, 167, 201), rgb(218, 170, 214), rgb(246, 179, 214));
+    color: white;
+}
+
+
+.fa-regular.fa-face-smile {
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 1rem 0;
+}
+.inner{
+    text-align: center;
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(20px);  /* Slightly move the text down initially */
+    animation: fadeInMove 1.5s ease forwards; /* Apply animation */
+}
+
+/* Define the keyframes for the fade and move animation */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);  /* Starting state: hidden and moved down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);  /* Ending state: visible and in original position */
+    }
+}
+.inner h1{
+    font-size: 2.5rem;
+}
+.actions.special{
+    padding: 3rem 0 9rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+.actions.special a{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+}
+
+.actions.special a:hover{
+    background-color: rgba(100, 165, 189, 0.619);
+    transform: translateY(-10px);
+}
+
+
+
