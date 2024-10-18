@@ -30,6 +30,7 @@ h2{
     font-size: 2rem;
     padding: 2rem 0;
 }
+/* page scrolls smoothly after clicking button */
 html{
     scroll-behavior: smooth;
 }
