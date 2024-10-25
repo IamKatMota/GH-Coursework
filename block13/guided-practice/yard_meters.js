@@ -1,9 +1,11 @@
 let inputYards = prompt("Enter a yard amount to convert")
+let convertedMeters = convertToMeters(inputYards);
+let output = createMessage(inputYards, convertedMeters);
+console.log(output);
 
 function convertToMeters(yards){
     return yards * 0.9144;
 }
-let convertedMeters = convertToMeters(inputYards);
 
 function createMessage(yards, meters){
     let message = ""
@@ -12,8 +14,17 @@ function createMessage(yards, meters){
         message = "That is as long as a mile";
     } else if(numYards === 100){
         message = "That is as long as a football field";
-    }else if(numYards === 26)
+    }else if(numYards === 26){
         message = "That is as long as a tennis court";
-    console.log(message);
+    }
+    return(`${yards} yards is ${meters} meters. ${message}`);
 }
-createMessage(inputYards, convertedMeters);
+
+function rand(limit){
+    return Math.round(Math.random()*limit)
+}
+let randomYards = rand(100); 
+convertedMeters = convertToMeters(randomYards);
+output = createMessage(randomYards, convertedMeters);
+console.log(output);
+
