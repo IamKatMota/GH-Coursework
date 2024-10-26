@@ -94,7 +94,8 @@ li{
 }
 
 /* TWO */
-.style2{
+.style2,
+.submission{
     background-image: linear-gradient(to bottom, rgba(158, 148, 204, 0.731), rgba(219, 142, 213, 0.743));
     color: white;
 }

@@ -126,26 +126,18 @@
             </p>
         </div>
         <section>
-            <form method="post" name="contact">
-                <input type="hidden" name="form-name" value="contact">
-                <div>
-                    <div>
-                        <input type="text" name="demo-name" id="demo-name" placeholder="Name">
-                    </div>
-                    <div>
-                        <input type="email" name="demo-email" id="demo-email" placeholder="Email">
-                    </div>
+            <form action="formsubmitted.html" method="get" name="contact">
+                <div class="centered">
+                    <input type="text" name="name" id="name" placeholder="Name">
                 </div>
-                <div >
-                    <textarea name="demo-message" id="demo-message"
-                        placeholder="Form submissions are disabled for the time being. If you need to reach me, please reach out via email."></textarea>
+                <div class="centered">
+                    <input type="email" name="email" id="email" placeholder="Email">
                 </div>
-                <div>
-                    <ul class="actions">
-                        <li><input disabled type="submit" value="Send Message" class="primary"></li>
-                        <li><input disabled type="reset" value="Reset"></li>
-                    </ul>
+                <div class="full-width">
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
                 </div>
+                <div class="full-width">
+                    <input type="submit" value="Send Message" id="submit">
                 </div>
             </form>
         </section>
