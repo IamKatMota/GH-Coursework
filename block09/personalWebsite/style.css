@@ -93,7 +93,7 @@ li{
     transform: translateY(-10px);
 }
 
-/* TWO */
+/* TWO & SUBMISSION PG*/
 .style2,
 .submission{
     background-image: linear-gradient(to bottom, rgba(158, 148, 204, 0.731), rgba(219, 142, 213, 0.743));
@@ -106,6 +106,10 @@ li{
     width: 100px;
     border-bottom: 1px solid #ffffff;
 }
+
+.submission{
+    margin-top: 50%;
+}
 /* IMAGES */
 
 #headshot{
@@ -113,7 +117,26 @@ li{
     padding-top: 2rem;
 }
 
-/* MY WORK */
+/*FORM */
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px ;
+}
+.centered{
+    justify-self: center;}
+    
+#message,
+#submit{
+    width: 100%;
+    height: 100%;
+}
+.full-width{
+    grid-column: 1 / 3;
+}
+.form{
+    background-image: linear-gradient(to bottom, rgba(158, 148, 204, 0.731), rgba(219, 142, 213, 0.743));
+}
 
 
 
