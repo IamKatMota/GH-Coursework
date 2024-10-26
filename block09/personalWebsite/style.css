@@ -80,6 +80,7 @@ li{
     justify-content: space-evenly;
     font-size: 1.3rem;
 }
+
 .actions.special a{
     border: 2px solid white;
     border-radius: 10px;
@@ -119,4 +120,18 @@ li{
 #footer{
     background-image: linear-gradient(200deg, rgb(246, 179, 214), rgb(218, 170, 214), rgb(173, 167, 201),rgb(100, 166, 189));
     color: white;
+}
+
+/* media queries */
+@media (max-width: 660px) {
+    .actions.special {
+        display: flex; /* Use flexbox for responsive layout */
+        flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+        gap: 15px; /* Adds space between each link */
+        justify-content: center; 
+    }
+    .actions.special a {
+        flex: 1 1 auto; /* Allows each item to shrink or grow based on available space */
+        text-align: center;
+    }
 }
