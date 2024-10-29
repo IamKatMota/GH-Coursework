@@ -116,6 +116,9 @@ li{
     width: 100%;
     padding-top: 2rem;
 }
+.imgPortfolio img{
+    width: 100%;
+}
 
 /*FORM */
 form{
