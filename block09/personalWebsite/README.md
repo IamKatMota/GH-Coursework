@@ -11,7 +11,7 @@ Welcome to my personal portfolio website repository! This site serves as an inte
 
 # Live Demo
 
-You can check out the live version of my portfolio here: Kat’s Portfolio
+You can check out the live version of my portfolio here: [Kat’s Portfolio](https://iamkatmota.github.io/personalWebsite/)
 
 # About the Project
 
