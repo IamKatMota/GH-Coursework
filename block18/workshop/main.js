@@ -30,7 +30,7 @@ When a logged-in user clicks “Checkout,” they should see their saved shippin
 
 When a guest user completes a purchase, they should be prompted to create an account.
 
-When a user tries to checkout an out-of-stock item, they should see a message and the item should be removed from their cart.
+When a user tries to checkout an out-of-stock item, they should see a message and the item should be removed from their cart
 
 
 
