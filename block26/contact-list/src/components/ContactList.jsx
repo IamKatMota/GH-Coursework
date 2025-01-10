@@ -1,43 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ContactRow from "./ContactRow";
 
-const dummyContacts = [
-    { id: 1, name: "R2-D2", phone: "222-222-2222", email: "r2d2@droids.com" },
-    { id: 2, name: "C-3PO", phone: "333-333-3333", email: "c3po@droids.com" },
-    { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
-];
 
+const API_URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
 
 function ContactList() {
-    const [contacts, setContacts] = useState(dummyContacts)
+    const [contacts, setContacts] = useState([])
+    useEffect(() => {
+        async function fetchContacts() {
+            try {
+                const promise = await fetch(`${API_URL}`)
+                const response = await promise.json()
+                console.log("Fetched contacts:", response)
+                //directly set the contacts state
+                setContacts(response)
+                console.log("Updated contacts state:", contacts)
 
-    console.log("contacts", contacts)
+            }
+            catch (error) {
+                console.error(error)
+            }
+        }
+        fetchContacts()
+    }, [])
 
+return (
+    <>
+        <table>
+            <thead>
+                <tr>
+                    <th colSpan="3"> Contact List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th> Name</th>
+                    <th> Email</th>
+                    <th> Phone</th>
+                </tr>
+                {
+                    contacts.map((contact) => {
+                        return <ContactRow key={contact.id} contactProp={contact} /> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
+                    })
+                }
 
-    return (
-        <>
-            <table>
-                <thead>
-                    <tr>
-                        <th colSpan="3"> Contact List</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th> Name</th>
-                        <th> Email</th>
-                        <th> Phone</th>
-                    </tr>
-                    {
-                        contacts.map((contact) => {
-                            return <ContactRow key={contact.id} contactProp={contact} /> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
-                        })
-                    }
-
-                </tbody>
-            </table>
-        </>
-    )
+            </tbody>
+        </table>
+    </>
+)
 
 }
 
