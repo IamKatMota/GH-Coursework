@@ -4,7 +4,7 @@ import ContactRow from "./ContactRow";
 
 const API_URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
 
-function ContactList() {
+function ContactList({setSelectedContactIdProp}) {
     const [contacts, setContacts] = useState([])
     useEffect(() => {
         async function fetchContacts() {
@@ -24,30 +24,30 @@ function ContactList() {
         fetchContacts()
     }, [])
 
-return (
-    <>
-        <table>
-            <thead>
-                <tr>
-                    <th colSpan="3"> Contact List</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th> Name</th>
-                    <th> Email</th>
-                    <th> Phone</th>
-                </tr>
-                {
-                    contacts.map((contact) => {
-                        return <ContactRow key={contact.id} contactProp={contact} /> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
-                    })
-                }
+    return (
+        <>
+            <table>
+                <thead>
+                    <tr>
+                        <th colSpan="3"> Contact List</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th> Name</th>
+                        <th> Email</th>
+                        <th> Phone</th>
+                    </tr>
+                    {
+                        contacts.map((contact) => {
+                            return <ContactRow key={contact.id} contactProp={contact} setSelectedContactIdProp={setSelectedContactId}/> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
+                        })
+                    }
 
-            </tbody>
-        </table>
-    </>
-)
+                </tbody>
+            </table>
+        </>
+    )
 
 }
 
