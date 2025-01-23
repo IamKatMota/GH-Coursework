@@ -4,6 +4,7 @@ import ContactRow from "./ContactRow";
 
 const API_URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
 
+//setSelectedContactIdProp here is the prop passed by App.jsx, its value is the setSelectedContactId function
 function ContactList({setSelectedContactIdProp}) {
     const [contacts, setContacts] = useState([])
     useEffect(() => {
@@ -40,7 +41,8 @@ function ContactList({setSelectedContactIdProp}) {
                     </tr>
                     {
                         contacts.map((contact) => {
-                            return <ContactRow key={contact.id} contactProp={contact} setSelectedContactIdProp={setSelectedContactId}/> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
+                            return <ContactRow key={contact.id} contactProp={contact} setSelectedContactIdProp={setSelectedContactIdProp}/> //passing the contact data (an object from the contacts array) as a prop to the ContactRow component so ContactRow can use the data from the contact object
+                            //{setSelectedContactIdProp} is the value of setSelectedContactIdProp that ContactList receieved (which is set as setSelectedContactId from App.jsx)
                         })
                     }
 
