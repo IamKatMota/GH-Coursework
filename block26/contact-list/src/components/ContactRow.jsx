@@ -1,7 +1,7 @@
 function ContactRow({ contactProp, setSelectedContactIdProp }) {
     return (
         <>
-            <tr onClick={
+            <tr className= "selectedRow" onClick={
                 () => setSelectedContactIdProp(contactProp.id)}>
                 <td>{contactProp.name}</td>
                 <td>{contactProp.email}</td>

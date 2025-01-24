@@ -27,6 +27,8 @@ function ContactList({setSelectedContactIdProp}) {
 
     return (
         <>
+            <div class="container">
+
             <table>
                 <thead>
                     <tr>
@@ -48,6 +50,7 @@ function ContactList({setSelectedContactIdProp}) {
 
                 </tbody>
             </table>
+            </div>
         </>
     )
 

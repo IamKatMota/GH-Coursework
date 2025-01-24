@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +13,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+thead {
+  background-color: rgba(62, 206, 62, 0.728);
+  font-family: "Mogra", serif;
+  font-size: 2rem;
+  height: 100px;
+  color: #ffffff;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+thead th {
+  border-bottom:2px solid white
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+th,
+td {
+  border-bottom: 2px solid black;
+  padding: 15px;
+}
+
+.selectedRow:hover {
+  background-color: rgb(229, 227, 227);
+}
+
+html:hover {
+  cursor: url('./assets/cursorpng.png'), auto;
+}
+
+button{
+  width: 100%;
+  background-color: pink;
+  border: 0px solid white;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:hover{
+  background-color: rgb(255, 166, 181);
+  cursor: url('./assets/cursorpng.png'), auto;
+  transform: translateY(-2px);
+
+}
+
+.header{
+  font-weight: 700;
 }
