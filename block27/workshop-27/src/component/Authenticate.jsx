@@ -38,7 +38,7 @@ function Authenticate({tokenProp}){
         }
         {username && <p>Hello {username}!</p>}
         {error && <p className='noAuthenticateTokenError'>{error}</p>}
-        <button onClick={handleClick}>Authenticate Token</button>
+        <button onClick={handleClick} className={error ? "shake" : ""}>Authenticate Token</button>
         </>
     )
 }

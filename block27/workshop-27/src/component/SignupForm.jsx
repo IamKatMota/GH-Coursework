@@ -79,7 +79,7 @@ function SignUpForm({ setTokenProp }) {
                     {errors.password && (<span className='error-message'>{errors.password}</span>)}
                 </label>
 
-                <button>Submit</button>
+                <button className={Object.keys(errors).length > 0 ? "shake" : ""}>Submit</button>
             </form>
         </>
     )
