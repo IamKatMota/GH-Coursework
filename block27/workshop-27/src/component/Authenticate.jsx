@@ -37,6 +37,7 @@ function Authenticate({tokenProp}){
         {successMessage && <p>{successMessage}</p>
         }
         {username && <p>Hello {username}!</p>}
+        {error && <p>{error}</p>}
         <button onClick={handleClick}>Authenticate Token</button>
         </>
     )
