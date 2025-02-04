@@ -58,7 +58,8 @@ button:hover {
 }
 
 /* Error Messages */
-.error-message {
+.error-message,
+.noAuthenticateTokenError{
   color: red;
   font-size: 12px;
   margin-top: 5px;
