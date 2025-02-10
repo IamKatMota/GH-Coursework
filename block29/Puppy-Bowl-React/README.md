@@ -2,6 +2,11 @@
 
 A fun **React-based** web app that fetches and displays adorable puppy players from the **Puppy Bowl API**! Users can browse, search, add, and remove players while enjoying a sleek and interactive UI.
 
+## 🌐 Deployed Site  
+Check out the live version of the **Puppy Bowl App** here:  
+
+🔗 [Puppy Bowl App](https://67aa6a005dc75e302991a47d--fantastic-caramel-4a17fc.netlify.app/)
+
 ## 🚀 Features  
 - 🏆 **View All Players** – Fetch and display all available Puppy Bowl players.  
 - 🔍 **Search for a Player** – Find players by name using the search bar.  
