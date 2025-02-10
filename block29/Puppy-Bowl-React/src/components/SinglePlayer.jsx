@@ -53,7 +53,7 @@ export default function SinglePlayer() {
             <h4>Status: {player.status}</h4>
             <h4>Team: {teamName}</h4>
             <Link to={"/"}>
-                <button>Back</button>
+                <button className="back-btn">Back</button>
             </Link>
         </div>
     );
