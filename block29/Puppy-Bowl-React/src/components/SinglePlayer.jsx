@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Get playerId from URL
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom"; // Import Link to navigate
 
-const cohortName = "2409-GHP-ET-WEB-PT";
-const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`;
 
+const cohortName = "2409-GHP-ET-WEB-PT";
+const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`
 export default function SinglePlayer() {
-    const { id } = useParams(); // Get player ID from URL
+    const { id } = useParams(); 
     const [player, setPlayer] = useState(null);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         if(!id){
             setError("Invalid player ID");
-            return //stopsfunction if playerId is missing
+            return; // Stop function if playerId is missing
         }
         async function fetchSinglePlayer() {
             try {
@@ -32,29 +32,34 @@ export default function SinglePlayer() {
         }
 
         fetchSinglePlayer();
-    }, [id]); // Runs when playerId changes
+    }, [id]);
 
-    // Handle error states before rendering
+    //  Show loading state while waiting for player data
+    if (!player && !error) return <p>Loading player...</p>;
+
+    // Show error if fetching fails
     if (error) return <p style={{ color: "red" }}>{error}</p>;
-    if (!player) return <p>No player found.</p>;
 
-    // caanot be decalred outside since player is null and will get undefeined
     const teamName =
-        player.teamId === 1797 ? "Ruff" :
-        player.teamId === 1798 ? "Fluff" :
+        player?.teamId === 1797 ? "Ruff" :
+        player?.teamId === 1798 ? "Fluff" :
         "Unassigned";
 
     return (
-        <div>
-            <img src={player.imageUrl} alt={player.name} className="player-image" />
-            <h3>Name: {player.name}</h3>
-            <h4>ID: {player.id}</h4>
-            <h4>Breed: {player.breed}</h4>
-            <h4>Status: {player.status}</h4>
-            <h4>Team: {teamName}</h4>
-            <Link to={"/"}>
-                <button className="back-btn">Back</button>
-            </Link>
+        <div className="singlePlayerCard">
+            {player && (
+                <>
+                    <img src={player.imageUrl} alt={player.name} className="player-image" />
+                    <h3>Name: {player.name}</h3>
+                    <h4>ID: {player.id}</h4>
+                    <h4>Breed: {player.breed}</h4>
+                    <h4>Status: {player.status}</h4>
+                    <h4>Team: {teamName}</h4>
+                    <Link to={"/"}>
+                        <button className="backButton">Back</button>
+                    </Link>
+                </>
+            )}
         </div>
     );
 }

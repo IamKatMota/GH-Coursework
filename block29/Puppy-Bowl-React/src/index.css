@@ -110,7 +110,7 @@ h1{
   background-color: rgb(0, 109, 119);
 }
 
-/* 🌟 Remove Player Button */
+/* 🌟 Remove & Details Player Button */
 .button {
   background-color:transparent;
   border: none;
@@ -118,9 +118,6 @@ h1{
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: rgb(131, 197, 190);
-}
 
 /* 🌟 Responsive Adjustments */
 @media (max-width: 768px) {
@@ -170,5 +167,62 @@ h1{
 }
 
 .searchContainer button:hover {
+  background-color: rgb(0, 109, 119);
+}
+
+/* 🌟 Single Player Card Styling */
+.singlePlayerCard {
+  background-color: rgba(255, 221, 210, 0.9); /* Light pastel background */
+  color: rgb(0, 109, 119); /* Dark teal text */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto; /* Center card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.singlePlayerCard:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* 🌟 Player Image */
+.singlePlayerCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure images don't stretch */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* 🌟 Player Info */
+.singlePlayerCard h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.singlePlayerCard h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* 🌟 Back Button */
+.backButton {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: rgb(131, 197, 190);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.backButton:hover {
   background-color: rgb(0, 109, 119);
 }
